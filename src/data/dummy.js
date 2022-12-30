@@ -44,22 +44,30 @@ export const gridOrderStatus = (props) => (
 );
 
 export const kanbanGrid = [
-  { headerText: 'To Do',
+  {
+    headerText: 'To Do',
     keyField: 'Open',
-    allowToggle: true },
+    allowToggle: true
+  },
 
-  { headerText: 'In Progress',
+  {
+    headerText: 'In Progress',
     keyField: 'InProgress',
-    allowToggle: true },
+    allowToggle: true
+  },
 
-  { headerText: 'Testing',
+  {
+    headerText: 'Testing',
     keyField: 'Testing',
     allowToggle: true,
-    isExpanded: false },
+    isExpanded: false
+  },
 
-  { headerText: 'Done',
+  {
+    headerText: 'Done',
     keyField: 'Close',
-    allowToggle: true },
+    allowToggle: true
+  },
 ];
 const gridEmployeeProfile = (props) => (
   <div className="flex items-center gap-2">
@@ -233,7 +241,7 @@ export const areaCustomSeries = [
     dataSource: areaChartData[2],
     xName: 'x',
     yName: 'y',
-    name: 'Germany',
+    name: 'India',
     opacity: '0.8',
     type: 'SplineArea',
     width: '2',
@@ -263,7 +271,7 @@ export const barCustomSeries = [
     dataSource: barChartData[0],
     xName: 'x',
     yName: 'y',
-    name: 'Gold',
+    name: 'Iron',
     type: 'Column',
     marker: {
       dataLabel: {
@@ -277,7 +285,7 @@ export const barCustomSeries = [
     dataSource: barChartData[1],
     xName: 'x',
     yName: 'y',
-    name: 'Silver',
+    name: 'Brass',
     type: 'Column',
     marker: {
       dataLabel: {
@@ -291,7 +299,7 @@ export const barCustomSeries = [
     dataSource: barChartData[2],
     xName: 'x',
     yName: 'y',
-    name: 'Bronze',
+    name: 'Copper',
     type: 'Column',
     marker: {
       dataLabel: {
@@ -323,20 +331,26 @@ export const colorMappingData = [
 ];
 
 export const rangeColorMapping = [
-  { label: '1°C to 10°C',
+  {
+    label: '1°C to 10°C',
     start: '1',
     end: '10',
-    colors: colorMappingData[1] },
+    colors: colorMappingData[1]
+  },
 
-  { label: '11°C to 20°C',
+  {
+    label: '11°C to 20°C',
     start: '11',
     end: '20',
-    colors: colorMappingData[2] },
+    colors: colorMappingData[2]
+  },
 
-  { label: '21°C to 30°C',
+  {
+    label: '21°C to 30°C',
     start: '21',
     end: '30',
-    colors: colorMappingData[3] },
+    colors: colorMappingData[3]
+  },
 
 ];
 
@@ -393,38 +407,50 @@ export const LinePrimaryYAxis = {
 
 export const customersGrid = [
   { type: 'checkbox', width: '50' },
-  { headerText: 'Name',
+  {
+    headerText: 'Name',
     width: '150',
     template: customerGridImage,
-    textAlign: 'Center' },
-  { field: 'ProjectName',
+    textAlign: 'Center'
+  },
+  {
+    field: 'ProjectName',
     headerText: 'Project Name',
     width: '150',
-    textAlign: 'Center' },
-  { field: 'Status',
+    textAlign: 'Center'
+  },
+  {
+    field: 'Status',
     headerText: 'Status',
     width: '130',
     format: 'yMd',
     textAlign: 'Center',
-    template: customerGridStatus },
+    template: customerGridStatus
+  },
   {
     field: 'Weeks',
     headerText: 'Weeks',
     width: '100',
     format: 'C2',
-    textAlign: 'Center' },
-  { field: 'Budget',
+    textAlign: 'Center'
+  },
+  {
+    field: 'Budget',
     headerText: 'Budget',
     width: '100',
     format: 'yMd',
-    textAlign: 'Center' },
+    textAlign: 'Center'
+  },
 
-  { field: 'Location',
+  {
+    field: 'Location',
     headerText: 'Location',
     width: '150',
-    textAlign: 'Center' },
+    textAlign: 'Center'
+  },
 
-  { field: 'CustomerID',
+  {
+    field: 'CustomerID',
     headerText: 'Customer ID',
     width: '120',
     textAlign: 'Center',
@@ -434,39 +460,51 @@ export const customersGrid = [
 ];
 
 export const employeesGrid = [
-  { headerText: 'Employee',
+  {
+    headerText: 'Employee',
     width: '150',
     template: gridEmployeeProfile,
-    textAlign: 'Center' },
-  { field: 'Name',
+    textAlign: 'Center'
+  },
+  {
+    field: 'Name',
     headerText: '',
     width: '0',
     textAlign: 'Center',
   },
-  { field: 'Title',
+  {
+    field: 'Title',
     headerText: 'Designation',
     width: '170',
     textAlign: 'Center',
   },
-  { headerText: 'Country',
+  {
+    headerText: 'Country',
     width: '120',
     textAlign: 'Center',
-    template: gridEmployeeCountry },
+    template: gridEmployeeCountry
+  },
 
-  { field: 'HireDate',
+  {
+    field: 'HireDate',
     headerText: 'Hire Date',
     width: '135',
     format: 'yMd',
-    textAlign: 'Center' },
+    textAlign: 'Center'
+  },
 
-  { field: 'ReportsTo',
+  {
+    field: 'ReportsTo',
     headerText: 'Reports To',
     width: '120',
-    textAlign: 'Center' },
-  { field: 'EmployeeID',
+    textAlign: 'Center'
+  },
+  {
+    field: 'EmployeeID',
     headerText: 'Employee ID',
     width: '125',
-    textAlign: 'Center' },
+    textAlign: 'Center'
+  },
 ];
 
 export const links = [
@@ -474,50 +512,50 @@ export const links = [
     title: 'Dashboard',
     links: [
       {
-        name: 'ecommerce',
+        name: 'Analysis',
         icon: <FiShoppingBag />,
       },
     ],
   },
 
-  {
-    title: 'Pages',
-    links: [
-      {
-        name: 'orders',
-        icon: <AiOutlineShoppingCart />,
-      },
-      {
-        name: 'employees',
-        icon: <IoMdContacts />,
-      },
-      {
-        name: 'customers',
-        icon: <RiContactsLine />,
-      },
-    ],
-  },
-  {
-    title: 'Apps',
-    links: [
-      {
-        name: 'calendar',
-        icon: <AiOutlineCalendar />,
-      },
-      {
-        name: 'kanban',
-        icon: <BsKanban />,
-      },
-      {
-        name: 'editor',
-        icon: <FiEdit />,
-      },
-      {
-        name: 'color-picker',
-        icon: <BiColorFill />,
-      },
-    ],
-  },
+  // {
+  //   title: 'Pages',
+  //   links: [
+  //     {
+  //       name: 'orders',
+  //       icon: <AiOutlineShoppingCart />,
+  //     },
+  //     {
+  //       name: 'employees',
+  //       icon: <IoMdContacts />,
+  //     },
+  //     {
+  //       name: 'customers',
+  //       icon: <RiContactsLine />,
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: 'Apps',
+  //   links: [
+  //     {
+  //       name: 'calendar',
+  //       icon: <AiOutlineCalendar />,
+  //     },
+  //     {
+  //       name: 'kanban',
+  //       icon: <BsKanban />,
+  //     },
+  //     {
+  //       name: 'editor',
+  //       icon: <FiEdit />,
+  //     },
+  //     {
+  //       name: 'color-picker',
+  //       icon: <BiColorFill />,
+  //     },
+  //   ],
+  // },
   {
     title: 'Charts',
     links: [
@@ -538,22 +576,22 @@ export const links = [
         name: 'pie',
         icon: <FiPieChart />,
       },
-      {
-        name: 'financial',
-        icon: <RiStockLine />,
-      },
-      {
-        name: 'color-mapping',
-        icon: <BsBarChart />,
-      },
-      {
-        name: 'pyramid',
-        icon: <GiLouvrePyramid />,
-      },
-      {
-        name: 'stacked',
-        icon: <AiOutlineBarChart />,
-      },
+      // {
+      //   name: 'financial',
+      //   icon: <RiStockLine />,
+      // },
+      // {
+      //   name: 'color-mapping',
+      //   icon: <BsBarChart />,
+      // },
+      // {
+      //   name: 'pyramid',
+      //   icon: <GiLouvrePyramid />,
+      // },
+      // {
+      //   name: 'stacked',
+      //   icon: <AiOutlineBarChart />,
+      // },
     ],
   },
 ];
@@ -586,70 +624,64 @@ export const chatData = [
   {
     image:
       avatar2,
-    message: 'Roman Joined the Team!',
-    desc: 'Congratulate him',
+    message: 'worker A got the potential garbage',
+    desc: 'Checklist 1 done',
     time: '9:08 AM',
   },
   {
     image:
       avatar3,
-    message: 'New message received',
-    desc: 'Salma sent you new message',
+    message: 'worker B got determined the few target metals using ML models',
+    desc: 'Checklist 2 done',
     time: '11:56 AM',
   },
   {
     image:
       avatar4,
-    message: 'New Payment received',
-    desc: 'Check your earnings',
-    time: '4:39 AM',
+    message: 'worker C extracted the determined resulting metals',
+    desc: 'Checklist 3 done',
+    time: '12:40 PM',
   },
-  {
-    image:
-      avatar,
-    message: 'Jolly completed tasks',
-    desc: 'Assign her new tasks',
-    time: '1:12 AM',
-  },
+
 ];
 
 export const earningData = [
   {
     icon: <MdOutlineSupervisorAccount />,
-    amount: '39,354',
-    percentage: '-4%',
-    title: 'Customers',
+    amount: '2,125',
+    percentage: '+4%',
+    title: 'Metal projects',
     iconColor: '#03C9D7',
     iconBg: '#E5FAFB',
-    pcColor: 'red-600',
+    pcColor: 'green-600',
   },
   {
     icon: <BsBoxSeam />,
-    amount: '4,396',
-    percentage: '+23%',
-    title: 'Products',
+    amount: '7,523',
+    percentage: '+16%',
+    title: 'Metals claimed',
     iconColor: 'rgb(255, 244, 229)',
     iconBg: 'rgb(254, 201, 15)',
     pcColor: 'green-600',
   },
   {
     icon: <FiBarChart />,
-    amount: '423,39',
-    percentage: '+38%',
-    title: 'Sales',
+    amount: '215,64',
+    percentage: '-8%',
+    title: 'Device sales',
     iconColor: 'rgb(228, 106, 118)',
     iconBg: 'rgb(255, 244, 229)',
 
-    pcColor: 'green-600',
+    pcColor: 'red-600',
   },
   {
     icon: <HiOutlineRefresh />,
-    amount: '39,354',
-    percentage: '-12%',
-    title: 'Refunds',
+    amount: '12,354',
+    percentage: '+13%',
+    title: 'gross profit',
     iconColor: 'rgb(0, 194, 146)',
     iconBg: 'rgb(235, 250, 242)',
-    pcColor: 'red-600',
+    pcColor: 'green-600',
   },
 ];
 
@@ -884,7 +916,8 @@ export const ordersGrid = [
     editType: 'dropdownedit',
     textAlign: 'Center',
   },
-  { field: 'CustomerName',
+  {
+    field: 'CustomerName',
     headerText: 'Customer Name',
     width: '150',
     textAlign: 'Center',
@@ -1490,7 +1523,7 @@ export const employeesData = [
     Country: 'USA',
     ReportsTo: 'Carson',
     EmployeeImage:
-    avatar3,
+      avatar3,
   },
   {
     EmployeeID: 2,
@@ -1560,7 +1593,7 @@ export const employeesData = [
     Country: 'USA',
     ReportsTo: 'Carson',
     EmployeeImage:
-    avatar2,
+      avatar2,
 
   },
   {
@@ -1631,7 +1664,7 @@ export const employeesData = [
     Country: 'USA',
     ReportsTo: 'Carson',
     EmployeeImage:
-    avatar,
+      avatar,
   },
   {
     EmployeeID: 2,
@@ -1701,7 +1734,7 @@ export const employeesData = [
     Country: 'USA',
     ReportsTo: 'Carson',
     EmployeeImage:
-    avatar2,
+      avatar2,
 
   },
   {
@@ -1772,7 +1805,7 @@ export const employeesData = [
     Country: 'USA',
     ReportsTo: 'Carson',
     EmployeeImage:
-    avatar2,
+      avatar2,
 
   },
   {
@@ -1843,7 +1876,7 @@ export const employeesData = [
     Country: 'USA',
     ReportsTo: 'Carson',
     EmployeeImage:
-    avatar2,
+      avatar2,
 
   },
   {
@@ -1914,7 +1947,7 @@ export const employeesData = [
     Country: 'USA',
     ReportsTo: 'Carson',
     EmployeeImage:
-    avatar2,
+      avatar2,
 
   },
   {
@@ -1985,7 +2018,7 @@ export const employeesData = [
     Country: 'USA',
     ReportsTo: 'Carson',
     EmployeeImage:
-    avatar2,
+      avatar2,
 
   },
   {
@@ -2056,7 +2089,7 @@ export const employeesData = [
     Country: 'USA',
     ReportsTo: 'Carson',
     EmployeeImage:
-    avatar2,
+      avatar2,
 
   },
   {
@@ -2176,7 +2209,7 @@ export const ordersData = [
     Status: 'rejected',
     StatusBg: 'red',
     ProductImage:
-    product1,
+      product1,
   },
   {
     OrderID: 94757,
@@ -3092,29 +3125,35 @@ export const SparklineAreaData = [
 ];
 
 export const lineCustomSeries = [
-  { dataSource: lineChartData[0],
+  {
+    dataSource: lineChartData[0],
     xName: 'x',
     yName: 'y',
-    name: 'Germany',
+    name: 'Copper',
     width: '2',
     marker: { visible: true, width: 10, height: 10 },
-    type: 'Line' },
+    type: 'Line'
+  },
 
-  { dataSource: lineChartData[1],
+  {
+    dataSource: lineChartData[1],
     xName: 'x',
     yName: 'y',
-    name: 'England',
+    name: 'Iron',
     width: '2',
     marker: { visible: true, width: 10, height: 10 },
-    type: 'Line' },
+    type: 'Line'
+  },
 
-  { dataSource: lineChartData[2],
+  {
+    dataSource: lineChartData[2],
     xName: 'x',
     yName: 'y',
-    name: 'India',
+    name: 'Brass',
     width: '2',
     marker: { visible: true, width: 10, height: 10 },
-    type: 'Line' },
+    type: 'Line'
+  },
 
 ];
 
@@ -3177,7 +3216,8 @@ export const stackedChartData = [
 
 export const stackedCustomSeries = [
 
-  { dataSource: stackedChartData[0],
+  {
+    dataSource: stackedChartData[0],
     xName: 'x',
     yName: 'y',
     name: 'Budget',
@@ -3186,7 +3226,8 @@ export const stackedCustomSeries = [
 
   },
 
-  { dataSource: stackedChartData[1],
+  {
+    dataSource: stackedChartData[1],
     xName: 'x',
     yName: 'y',
     name: 'Expense',

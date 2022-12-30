@@ -3,11 +3,19 @@ import { BsCurrencyDollar } from 'react-icons/bs';
 import { GoPrimitiveDot } from 'react-icons/go';
 import { IoIosMore } from 'react-icons/io';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+// import Carousel from 'flat-carousel';
 
 import { Stacked, Pie, Button, LineChart, SparkLine } from '../components';
 import { earningData, medicalproBranding, recentTransactions, weeklyStats, dropdownData, SparklineAreaData, ecomPieChartData } from '../data/dummy';
 import { useStateContext } from '../contexts/ContextProvider';
 import product9 from '../data/product9.jpg';
+
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
+import sl1 from "../data/sl1.jpg";
+import sl2 from "../data/sl2.jpg";
+import sl3 from "../data/sl3.jpg";
+
 
 const DropDown = ({ currentMode }) => (
   <div className="w-28 border-1 border-color px-2 py-1 rounded-md">
@@ -17,15 +25,26 @@ const DropDown = ({ currentMode }) => (
 
 const Ecommerce = () => {
   const { currentColor, currentMode } = useStateContext();
-
+  const liveFeed = [
+    { lf: 'Garbage under scanning' },
+    { lf: 'found few potential metals' },
+    { lf: 'ML determined the final metals to be extracted' },
+    { lf: 'The Metlas are: xyz,xyz,xyz' }
+  ];
+  const caroStyle = {
+    display: "flex",
+    margin: "auto",
+    justifyContent: "center",
+    textAlign: "center"
+  }
   return (
     <div className="mt-24">
       <div className="flex flex-wrap lg:flex-nowrap justify-center ">
         <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center">
           <div className="flex justify-between items-center">
             <div>
-              <p className="font-bold text-gray-400">Earnings</p>
-              <p className="text-2xl">$63,448.78</p>
+              <p className="font-bold text-gray-400">Metals Revenue</p>
+              <p className="text-2xl">$8,328.53</p>
             </div>
             <button
               type="button"
@@ -66,8 +85,8 @@ const Ecommerce = () => {
         </div>
       </div>
 
-      <div className="flex gap-10 flex-wrap justify-center">
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780  ">
+      <div className="justify-center">
+        {/* <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780  ">
           <div className="flex justify-between">
             <p className="font-semibold text-xl">Revenue Updates</p>
             <div className="flex items-center gap-4">
@@ -118,18 +137,53 @@ const Ecommerce = () => {
               <Stacked currentMode={currentMode} width="320px" height="360px" />
             </div>
           </div>
+        </div> */}
+        {/* <Carousel> flex gap-10 flex-wrap 
+          {liveFeed.map((i, index) => (
+            <div
+              key={index}
+              className="demo-item"
+              style={{ backgroundColor: "aquamarine" }}
+            >
+              {i.lf}
+            </div>
+          ))}
+        </Carousel> */}
+        <div class="carousel-wrapper" style={{ display: "flex", margin: "auto", width: "82%", backgroundImage: { sl2 }, justifyContent: "center", borderRadius: "25px", height: "300px", backgroundColor: "#00FFFF", color: "orange" }}>
+          {/* const liveFeed = [
+          {lf: 'Garbage under scanning' },
+          {lf: 'found few potential metals' },
+          {lf: 'ML determined the final metals to be extracted' },
+          {lf: 'The Metlas are: xyz,xyz,xyz' }
+          ]; */}
+          <Carousel infiniteLoop useKeyboardArrows autoPlay>
+
+            <div style={{ backgroundImage: "sl1.jpg" }}>
+              Potential garbage under scanning
+            </div>
+            {/* <div>
+              detected few metals in first phase
+            </div> */}
+            <div style={{ backgroundImage: "sl2.jpg" }}>
+              ML models determined the final metals to be extracted
+            </div>
+            <div style={{ backgroundImage: "sl3.jpg" }}>
+              The metals are: xyz,xyz,xyz
+            </div>
+          </Carousel>
         </div>
-        <div>
+        <br></br>
+        <div style={{ display: "flex", marginLeft: "390px" }}>
           <div
             className=" rounded-2xl md:w-400 p-4 m-3"
             style={{ backgroundColor: currentColor }}
           >
             <div className="flex justify-between items-center ">
-              <p className="font-semibold text-white text-2xl">Earnings</p>
+              <p className="font-semibold text-white text-xl">Metal extracted worth</p>
 
               <div>
-                <p className="text-2xl text-white font-semibold mt-8">$63,448.78</p>
-                <p className="text-gray-200">Monthly revenue</p>
+                <p className="text-2xl text-white font-semibold mt-8">$6,448.78</p>
+
               </div>
             </div>
 
@@ -140,8 +194,8 @@ const Ecommerce = () => {
 
           <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl md:w-400 p-8 m-3 flex justify-center items-center gap-10">
             <div>
-              <p className="text-2xl font-semibold ">$43,246</p>
-              <p className="text-gray-400">Yearly sales</p>
+              <p className="text-2xl font-semibold ">2,146</p>
+              <p className="text-gray-400">Metal extracted</p>
             </div>
 
             <div className="w-40">
@@ -151,7 +205,7 @@ const Ecommerce = () => {
         </div>
       </div>
 
-      <div className="flex gap-10 m-4 flex-wrap justify-center">
+      {/* <div className="flex gap-10 m-4 flex-wrap justify-center">
         <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 rounded-2xl">
           <div className="flex justify-between items-center gap-2">
             <p className="text-xl font-semibold">Recent Transactions</p>
@@ -202,9 +256,9 @@ const Ecommerce = () => {
             <LineChart />
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <div className="flex flex-wrap justify-center">
+      {/* <div className="flex flex-wrap justify-center">
         <div className="md:w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
           <div className="flex justify-between">
             <p className="text-xl font-semibold">Weekly Stats</p>
@@ -325,7 +379,7 @@ const Ecommerce = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
