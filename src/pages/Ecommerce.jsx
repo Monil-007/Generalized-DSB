@@ -149,21 +149,14 @@ const Ecommerce = () => {
             </div>
           ))}
         </Carousel> */}
-        <div class="carousel-wrapper" style={{ display: "flex", margin: "auto", width: "82%", backgroundImage: { sl2 }, justifyContent: "center", borderRadius: "25px", height: "300px", backgroundColor: "#00FFFF", color: "orange" }}>
-          {/* const liveFeed = [
-          {lf: 'Garbage under scanning' },
-          {lf: 'found few potential metals' },
-          {lf: 'ML determined the final metals to be extracted' },
-          {lf: 'The Metlas are: xyz,xyz,xyz' }
-          ]; */}
+        {/* <div class="carousel-wrapper" style={{ display: "flex", margin: "auto", width: "82%", backgroundImage: { sl2 }, justifyContent: "center", borderRadius: "25px", height: "300px", backgroundColor: "#00FFFF", color: "orange" }}>
+          
           <Carousel infiniteLoop useKeyboardArrows autoPlay>
 
             <div style={{ backgroundImage: "sl1.jpg" }}>
               Potential garbage under scanning
             </div>
-            {/* <div>
-              detected few metals in first phase
-            </div> */}
+       
             <div style={{ backgroundImage: "sl2.jpg" }}>
               ML models determined the final metals to be extracted
             </div>
@@ -171,7 +164,7 @@ const Ecommerce = () => {
               The metals are: xyz,xyz,xyz
             </div>
           </Carousel>
-        </div>
+        </div> */}
         <br></br>
         <div style={{ display: "flex", marginLeft: "390px" }}>
           <div
