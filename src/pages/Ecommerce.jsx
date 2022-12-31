@@ -10,7 +10,7 @@ import { earningData, medicalproBranding, recentTransactions, weeklyStats, dropd
 import { useStateContext } from '../contexts/ContextProvider';
 import product9 from '../data/product9.jpg';
 
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import sl1 from "../data/sl1.jpg";
 import sl2 from "../data/sl2.jpg";
@@ -138,18 +138,94 @@ const Ecommerce = () => {
             </div>
           </div>
         </div> */}
-        {/* <Carousel> flex gap-10 flex-wrap 
+        {/* <Carousel> flex gap-10 flex-wrap
           {liveFeed.map((i, index) => (
             <div
               key={index}
               className="demo-item"
-              style={{ backgroundColor: "aquamarine" }}
+              style={{ backgroundColor: 'aquamarine' }}
             >
               {i.lf}
             </div>
           ))}
         </Carousel> */}
-        {/* <div class="carousel-wrapper" style={{ display: "flex", margin: "auto", width: "82%", backgroundImage: { sl2 }, justifyContent: "center", borderRadius: "25px", height: "300px", backgroundColor: "#00FFFF", color: "orange" }}>
+        <div className="carousel-wrapper flex mx-auto w-82% rounded-md h-300 text-orange-500">
+          <Carousel infiniteLoop useKeyboardArrows autoPlay>
+          <div className="flex items-center justify-center mt-12">
+                <a className="relative block w-1/4 bg-gray-900 group" href="##">
+                  <img className="absolute inset-0 object-cover 
+                                        w-full h-full group-hover:opacity-50" src={sl1} />
+                  <div className="relative p-5">
+                    <div className="mt-40">
+                      <div className="transition-all transform 
+                                        translate-y-8 opacity-0 
+                                        group-hover:opacity-100 
+                                        group-hover:translate-y-0">
+                        <div className="p-2">
+                          <p className="text-lg text-white">
+                            Welcome to Our site
+                          </p>
+                          <button className="px-4 py-2 text-sm 
+                                                    text-white bg-green-600">
+                            Visit site
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+        </div>
+        <div className="flex items-center justify-center mt-12">
+                <a className="relative block w-1/4 bg-gray-900 group" href="##">
+                  <img className="absolute inset-0 object-cover 
+                                        w-full h-full group-hover:opacity-50" src={sl2} />
+                  <div className="relative p-5">
+                    <div className="mt-40">
+                      <div className="transition-all transform 
+                                        translate-y-8 opacity-0 
+                                        group-hover:opacity-100 
+                                        group-hover:translate-y-0">
+                        <div className="p-2">
+                          <p className="text-lg text-white">
+                          Welcome to Our site
+                          </p>
+                          <button className="px-4 py-2 text-sm 
+                                                    text-white bg-green-600">
+                            Visit site
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+        </div>
+        <div className="flex items-center justify-center mt-12">
+                <a className="relative block w-1/4 bg-gray-900 group" href="##">
+                  <img className="absolute inset-0 object-cover 
+                                        w-full h-full group-hover:opacity-50" src={sl3}/>
+                  <div className="relative p-5">
+                    <div className="mt-40">
+                      <div className="transition-all transform 
+                                        translate-y-8 opacity-0 
+                                        group-hover:opacity-100 
+                                        group-hover:translate-y-0">
+                        <div className="p-2">
+                          <p className="text-lg text-white">
+                          Welcome to Our site
+                          </p>
+                          <button className="px-4 py-2 text-sm 
+                                                    text-white bg-green-600">
+                            Visit site
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+        </div>
+          </Carousel>
+        </div>
+        {/* <div className="carousel-wrapper" style={{ display: "flex", margin: "auto", width: "82%", backgroundImage: { sl2 }, justifyContent: "center", borderRadius: "25px", height: "300px", backgroundColor: "#00FFFF", color: "orange" }}>
           
           <Carousel infiniteLoop useKeyboardArrows autoPlay>
 
