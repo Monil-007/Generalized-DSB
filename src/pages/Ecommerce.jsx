@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BsCurrencyDollar } from 'react-icons/bs';
 import { GoPrimitiveDot } from 'react-icons/go';
 import { IoIosMore } from 'react-icons/io';
@@ -15,7 +15,13 @@ import { Carousel } from 'react-responsive-carousel';
 import sl1 from "../data/sl1.jpg";
 import sl2 from "../data/sl2.jpg";
 import sl3 from "../data/sl3.jpg";
-
+import Webcam from 'react-webcam'
+const WebcamComponent = () => <Webcam />
+const videoConstraints = {
+  width: 400,
+  height: 400,
+  facingMode: 'user',
+}
 
 const DropDown = ({ currentMode }) => (
   <div className="w-28 border-1 border-color px-2 py-1 rounded-md">
@@ -24,6 +30,12 @@ const DropDown = ({ currentMode }) => (
 );
 
 const Ecommerce = () => {
+  const [picture, setPicture] = useState('')
+  const webcamRef = React.useRef(null)
+  const capture = React.useCallback(() => {
+    const pictureSrc = webcamRef.current.getScreenshot()
+    setPicture(pictureSrc)
+  })
   const { currentColor, currentMode } = useStateContext();
   const liveFeed = [
     { lf: 'Garbage under scanning' },
@@ -39,6 +51,50 @@ const Ecommerce = () => {
   }
   return (
     <div className="mt-24">
+
+      <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", marginLeft: "38%" }}>
+        <div>
+          {picture == '' ? (
+            <Webcam
+              audio={false}
+              height={400}
+              ref={webcamRef}
+              width={400}
+              screenshotFormat="image/jpeg"
+              videoConstraints={videoConstraints}
+            />
+          ) : (
+            <img src={picture} />
+          )}
+        </div>
+        <div style={{ marginLeft: "20%" }}>
+          {picture != '' ? (
+            <button
+              onClick={(e) => {
+                e.preventDefault()
+                setPicture()
+                window.location.reload();
+              }}
+              className="btn btn-primary"
+              style={{ backgroundColor: "orange", borderRadius: "16%", marginBottom: "13px", marginTop: "13px" }}
+            >
+              Retake
+            </button>
+          ) : (
+            <button
+              onClick={(e) => {
+                e.preventDefault()
+                capture()
+              }}
+              className="btn btn-success"
+              style={{ backgroundColor: "limegreen", borderRadius: "16%", marginBottom: "13px", marginTop: "13px" }}>
+              Capture
+            </button>
+          )}
+        </div>
+        <div style={{ marginLeft: "18%" }}><button type="button" class="btn btn-success" style={{ backgroundColor: "limegreen", borderRadius: "16%" }}>Submit Input</button></div>
+      </div>
+
       <div className="flex flex-wrap lg:flex-nowrap justify-center ">
         <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center">
           <div className="flex justify-between items-center">
@@ -149,7 +205,8 @@ const Ecommerce = () => {
             </div>
           ))}
         </Carousel> */}
-        <div className="carousel-wrapper flex mx-auto w-82% rounded-md h-300 text-orange-500">
+        <h3 style={{ display: 'flex', justifyContent: 'center', textAlign: 'center', color: 'Orange', fontSize: '60px' }}>Live Feed</h3>
+        <div className="carousel-wrapper flex mx-auto w-82% rounded-md h-400 text-orange-800">
           <Carousel infiniteLoop useKeyboardArrows autoPlay>
             <div className="flex items-center justify-center mt-12">
               <a className="relative block w-1/4 bg-gray-900 group" href="##">
@@ -162,13 +219,13 @@ const Ecommerce = () => {
                                         group-hover:opacity-100 
                                         group-hover:translate-y-0">
                       <div className="p-2">
-                        <p className="text-lg text-white">
-                          Welcome to Our site
+                        <p className="text-lg text-green">
+                          Metal image input taken
                         </p>
-                        <button className="px-4 py-2 text-sm 
+                        {/* <button className="px-4 py-2 text-sm 
                                                     text-white bg-green-600">
                           Visit site
-                        </button>
+                        </button> */}
                       </div>
                     </div>
                   </div>
@@ -186,13 +243,13 @@ const Ecommerce = () => {
                                         group-hover:opacity-100 
                                         group-hover:translate-y-0">
                       <div className="p-2">
-                        <p className="text-lg text-white">
-                          Welcome to Our site
+                        <p className="text-lg text-green">
+                          ML algos running
                         </p>
-                        <button className="px-4 py-2 text-sm 
+                        {/* <button className="px-4 py-2 text-sm 
                                                     text-white bg-green-600">
                           Visit site
-                        </button>
+                        </button> */}
                       </div>
                     </div>
                   </div>
@@ -210,13 +267,13 @@ const Ecommerce = () => {
                                         group-hover:opacity-100 
                                         group-hover:translate-y-0">
                       <div className="p-2">
-                        <p className="text-lg text-white">
-                          Welcome to Our site
+                        <p className="text-lg text-green">
+                          Metals to be extracted are determined
                         </p>
-                        <button className="px-4 py-2 text-sm 
+                        {/* <button className="px-4 py-2 text-sm 
                                                     text-white bg-green-600">
                           Visit site
-                        </button>
+                        </button> */}
                       </div>
                     </div>
                   </div>
