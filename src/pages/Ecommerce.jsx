@@ -92,7 +92,7 @@ const Ecommerce = () => {
             </button>
           )}
         </div>
-        <div style={{ marginLeft: "18%" }}><button type="button" class="btn btn-success" style={{ backgroundColor: "limegreen", borderRadius: "16%" }}>Submit Input</button></div>
+        <div style={{ marginLeft: "18%" }}><button type="button" href="https://mlcrats-yolov5-e-waste-detection-app-ffzm7i.streamlit.app/" target="_blank" class="btn btn-success" style={{ backgroundColor: "limegreen", borderRadius: "16%" }}>Submit Input</button></div>
       </div>
 
       <div className="flex flex-wrap lg:flex-nowrap justify-center ">
