@@ -1,0 +1,60 @@
+.pfHeader {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+.portfolioStockW {
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolioStockp1 {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.portfolioStockp2 {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.portfolioStockp3 {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.portfolioStockp11 {
+    color: 'grey';
+    font-size: 11px;
+}
+
+.portfolioStockp31 {
+    color: 'grey';
+    font-size: 11px;
+}
+
+.r1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.r2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.reduxData {
+    max-width: 800px;
+    margin: auto;
+}

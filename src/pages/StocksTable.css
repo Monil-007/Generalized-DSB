@@ -1,0 +1,16 @@
+.StockBoard_heading {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    color: wheat;
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 40px;
+
+}
+
+.StockBoard {
+    margin-left: 25px;
+    margin-right: 25px;
+    color: brown;
+}

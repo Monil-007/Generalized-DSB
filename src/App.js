@@ -2,12 +2,12 @@ import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
-
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
-import { Ecommerce, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Kanban, Line, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor } from './pages';
+import { StocksTable, Line, Area, Bar, Pie, StockAnalysis, CompanyNews, MarketNews, DummyTrading, Portfolio } from './pages';
 import './App.css';
-
 import { useStateContext } from './contexts/ContextProvider';
+import { Provider } from "react-redux";
+import store from "./store.js";
 
 const App = () => {
   const { setCurrentColor, setCurrentMode, currentMode, activeMenu, currentColor, themeSettings, setThemeSettings } = useStateContext();
@@ -22,7 +22,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className={currentMode === 'Dark' ? 'dark' : ''}>
+    <Provider store={store}><div className={currentMode === 'Dark' ? 'dark' : ''}>
       <BrowserRouter>
         <div className="flex relative dark:bg-main-dark-bg">
           <div className="fixed right-4 bottom-4" style={{ zIndex: '1000' }}>
@@ -62,41 +62,26 @@ const App = () => {
             </div>
             <div>
               {themeSettings && (<ThemeSettings />)}
-
               <Routes>
-                {/* dashboard  */}
-                <Route path="/" element={(<Ecommerce />)} />
-                <Route path="/Analysis" element={(<Ecommerce />)} />
-
-                {/* pages  */}
-                {/* <Route path="/orders" element={<Orders />} />
-                <Route path="/employees" element={<Employees />} />
-                <Route path="/customers" element={<Customers />} /> */}
-
-                {/* apps  */}
-                {/* <Route path="/kanban" element={<Kanban />} />
-                <Route path="/editor" element={<Editor />} />
-                <Route path="/calendar" element={<Calendar />} />
-                <Route path="/color-picker" element={<ColorPicker />} /> */}
-
-                {/* charts  */}
-                <Route path="/line" element={<Line />} />
+                <Route path="/" element={(<StocksTable />)} />
+                <Route path="/Analysis" element={(<StocksTable />)} />
+                <Route path="/StockAnalysis" element={(<StockAnalysis />)} />
+                <Route path="Trendingmarketnews" element={(<MarketNews />)} />
+                <Route path="/CompanyNews" element={(<CompanyNews />)} />
+                <Route path="/dummyTrading" element={(<DummyTrading />)} />
+                <Route path="/Portfolio" element={(<Portfolio />)} />
+                {/* <Route path="/line" element={<Line />} />
                 <Route path="/area" element={<Area />} />
                 <Route path="/bar" element={<Bar />} />
-                <Route path="/pie" element={<Pie />} />
-                {/* <Route path="/financial" element={<Financial />} />
-                <Route path="/color-mapping" element={<ColorMapping />} />
-                <Route path="/pyramid" element={<Pyramid />} />
-                <Route path="/stacked" element={<Stacked />} /> */}
-
+                <Route path="/pie" element={<Pie />} /> */}
               </Routes>
             </div>
             <Footer />
           </div>
         </div>
       </BrowserRouter>
-    </div>
+    </div></Provider>
+
   );
 };
-
 export default App;

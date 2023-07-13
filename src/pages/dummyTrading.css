@@ -1,0 +1,70 @@
+.glassmorphic-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 400px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)),
+        linear-gradient(225deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    border-radius: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5),
+        -20px -20px 50px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+}
+
+.glassmorphic-input input {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 10px;
+    color: #fff;
+    font-size: 16px;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1),
+        inset 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    background: #6c757d;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 30px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2),
+        0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2),
+        0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.heading {
+    color: greenyellow;
+    font-size: 55px;
+    margin-top: 20px;
+    margin-bottom: 2px;
+    display: flex;
+    justify-content: center;
+}
+
+.subHeading {
+    font-size: 15px;
+    color: coral;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.dummyDiv {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-left: 40%;
+    justify-content: center;
+    text-align: center;
+}

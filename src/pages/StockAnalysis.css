@@ -1,0 +1,58 @@
+.cardRows {
+    display: flex;
+    flex-direction: column;
+    gap: 50%
+}
+
+.cardRow1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 60px;
+    margin-top: 35px;
+}
+
+.cardRow2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.InputBar {
+    display: flex;
+    justify-content: center;
+    border-radius: 20%;
+    background-color: paleturquoise;
+}
+
+.queryInput {
+    display: flex;
+    flex-direction: row;
+    gap: 4%;
+    justify-content: center;
+}
+
+.querySubmitButton {
+    background-color: aqua;
+    cursor: pointer;
+    color: black;
+    width: 77px;
+}
+
+.heading {
+    color: greenyellow;
+    font-size: 55px;
+    margin-top: 20px;
+    margin-bottom: 2px;
+    display: flex;
+    justify-content: center;
+}
+
+.subHeading {
+    font-size: 15px;
+    color: coral;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 40px;
+}

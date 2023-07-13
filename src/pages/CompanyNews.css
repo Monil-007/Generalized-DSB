@@ -1,0 +1,23 @@
+.newsDisplay {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10%;
+}
+
+.queryForm {
+    margin-bottom: 50px;
+}
+
+.newsHeadline {
+    color: red;
+}
+
+.newsSource {
+    color: green;
+}
+
+.newsUrl {
+    color: blue;
+    text-decoration: underline;
+}
